@@ -46,6 +46,7 @@ class Player(Sprite):
             state = 'loose'
 
 class Enemy(Sprite):
+    """Описание класса"""
     def __init__(self, path, x, y, width, height, speed):
         super().__init__(path, x, y, width, height)
         self.speed = speed
