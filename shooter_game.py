@@ -95,12 +95,12 @@ bullets = pygame.sprite.Group()
 enemies = pygame.sprite.Group()
 comets = pygame.sprite.Group()
 
-# Initialize level and enemy speed
+# определение уровня и скорости врагов
 level = 1
 enemy_speed = 2
 comet_speed = 1
 
-# Function to create enemies and comets based on current level
+# функция для создания врагов и комет базированных на текущем уровне
 def create_enemies_and_comets(level):
     for i in range(level * 3):
         enemy = Enemy('ufo.png', 100 * i, randint(-400, -50), 50, 50, enemy_speed)
@@ -142,13 +142,13 @@ while run:
     bullets.draw(window)
     rocket.draw(window)
     
-    if points == level * 10:  # Increase level every 10 points
-        if level == 5:  # Reached level 5, display win screen
+    if points == level * 10:  # следующий уровень каждые 10 поинтов
+        if level == 5:  # при достижении 5 уровня выводит надпись вин
             state = 'win'
-        else:  # Go to the next level
+        else:  # давай на другой уровень
             level += 1
-            enemy_speed += 1  # Increase enemy speed with each level
-            comet_speed += 0.5  # Increase comet speed with each level
+            enemy_speed += 1  # Ускоряет врагов с каждым уровнем
+            comet_speed += 0.5  # Ускоряет кометы с каждым уровнем
             state = 'menu'
     
     if missed == 15:
