@@ -169,6 +169,6 @@ while run:
         bullets.update()
         rocket.move()       
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(60)         #фэпс
 
     
