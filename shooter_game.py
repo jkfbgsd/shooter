@@ -154,13 +154,13 @@ while run:
     if missed == 15:
         state = 'loose'
     if state == 'win':
-        text_img = font.render('Win', True, (0, 255, 0))
+        text_img = font.render('Win', True, (0, 255, 0)) #ПОБЕДА
         window.blit(text_img, (325, 250))
     if state == 'loose':
-        text_img = font.render('GAME OVER', True, (255, 0, 0))
+        text_img = font.render('GAME OVER', True, (255, 0, 0)) #ПОРАЖЕНИЕ
         window.blit(text_img, (300, 250))
     if state == 'menu':
-        text_img = font.render('Press ENTER to start the level', True, (255, 255, 255))
+        text_img = font.render('Press ENTER to start the level', True, (255, 255, 255)) #НАЧАЛО
         window.blit(text_img, (220, 250))
     if state == 'game':
         rocket.update()
