@@ -109,6 +109,7 @@ def create_enemies_and_comets(level):
         comet = Comet('asteroid.png', 100 * i + 50, randint(-400, -50), 50, 50, comet_speed)
         comets.add(comet)
 
+#создание ракеты игрока с управлением
 bg = Sprite('galaxy.jpg', 0, 0, 700, 500)
 rocket = Player('rocket.png', 325, 400, 50, 70)
 cooldown = 0 
